@@ -1,12 +1,12 @@
 # Mongoose Express CRUD Mastery
-**Objective**: Build a Node.js Express application with MongoDB (using Mongoose) to manage user data and their orders. Implement validation using Joi/Zod for data integrity.
+**Objective:** Develop a Node.js Express application with TypeScript as the programming language, integrating MongoDB with Mongoose for user data and order management. Ensure data integrity through validation using Joi/Zod.
 
-## Set up the Project
+### Set up the Project
 
 - Create a new Node.js Express project.
 - Set up a MongoDB database using Mongoose for storing user and order data.
 
-## Define Data Models
+### Define Data Models
 
 - Create Mongoose models for User and Order based on the provided data structure.
 - Define appropriate data types, validations.
@@ -32,13 +32,12 @@
     - `price` (number): The price of the product in the order.
     - `quantity` (number): The quantity of the product in the order.
 
-## **Implement CRUD Operations**
 
 ## Main Section (50 Marks):
 
-## **User Management:**
+### User Management:
 
-### 1. **Create a new user**
+### 1. Create a new user
 
 - Endpoint: **POST /api/users**
 - Request Body:
@@ -90,11 +89,10 @@ Response: Newly created user object. **Make sure that the password field is not 
 }
 ```
 
-### 2. **Retrieve a list of all users**
+### 2. Retrieve a list of all users
 
-Endpoint: **GET /api/users**
-
-Response: List of user objects. Each object should only contain `username`, `fullName`, `age`, `email`, `address` . Apply suitable field filtering to exclusively retrieve the necessary information. 
+- Endpoint: **GET /api/users**
+- Response: List of user objects. Each object should only contain `username`, `fullName`, `age`, `email`, `address` . Apply suitable field filtering to exclusively retrieve the necessary information. 
 
 ```json
 {
@@ -120,11 +118,11 @@ Response: List of user objects. Each object should only contain `username`, `ful
 }
 ```
 
-### 3. **Retrieve a specific user by ID**
+### 3. Retrieve a specific user by ID
 
-Endpoint: **GET /api/users/:userId**
+- Endpoint: **GET /api/users/:userId**
 
-Response: User object and make sure that the password field is not included in the response data. If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not. (Follow the given error response format).
+- Response: User object and make sure that the password field is not included in the response data. If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not. (Follow the given error response format).
 
 ```json
 {
@@ -150,13 +148,13 @@ Response: User object and make sure that the password field is not included in t
 }
 ```
 
-### 4. **Update user information**
+### 4. Update user information
 
-Endpoint: **PUT /api/users/:userId**
+- Endpoint: **PUT /api/users/:userId**
 
-Request Body: Updated user data (similar structure as in user creation).
+- Request Body: Updated user data (similar structure as in user creation).
 
-Response: Updated user object and make sure that the password field is not included in the response data. If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Follow the given error response format).
+- Response: Updated user object and make sure that the password field is not included in the response data. If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Follow the given error response format).
 
 ```json
 {
@@ -182,11 +180,11 @@ Response: Updated user object and make sure that the password field is not inclu
 }
 ```
 
-### 5. **Delete a user**
+### 5. Delete a user
 
-Endpoint: **DELETE /api/users/:userId**
+- Endpoint: **DELETE /api/users/:userId**
 
-Response: Success message or,  If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Follow the given error response format).
+- Response: Success message or,  If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Follow the given error response format).
 
 ```json
 {
@@ -198,15 +196,15 @@ Response: Success message or,  If you can't find information about the user, sho
 
 ## Bonus Section (10 marks):
 
-### **Order Management:
+### Order Management:
 
-1. Add New Product in Order**
+1. Add New Product in Order
 
 Append a new product to the order property of an existing user.
 
-Endpoint: **PUT /api/users/:userId/orders**
+- Endpoint: **PUT /api/users/:userId/orders**
 
-Request Body: If you can't find information about the user, show a clear message. Use either `instanceof` or `static` method to display this error message.  (Follow the given error response format).
+- Request Body: If you can't find information about the user, show a clear message. Use either `instanceof` or `static` method to display this error message.  (Follow the given error response format).
 
 ```json
 {
@@ -226,11 +224,11 @@ Response:
 }
 ```
 
-### 2. **Retrieve all orders for a specific user**
+### 2. Retrieve all orders for a specific user
 
-Endpoint: **GET /api/users/:userId/orders**
+- Endpoint: **GET /api/users/:userId/orders**
 
-Response: List of order objects for the specified user or, If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Follow the given error response format).
+- Response: List of order objects for the specified user or, If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Follow the given error response format).
 
 ```json
 {
@@ -281,13 +279,13 @@ Response: List of order objects for the specified user or, If you can't find inf
 }
 ```
 
-## **4. Validation with Joi/Zod**
+## Validation with Joi/Zod
 
 - Use Joi/zod to validate incoming data for user and order creation and updating operations.
 - Ensure that the data adheres to the structure defined in the models.
 - Handle validation errors gracefully and provide meaningful error messages in the API responses.
 
-## **Instruction**
+## Instruction
 
 1. **Coding Quality:**
     - Write clean, modular, and well-organized code.
@@ -317,6 +315,6 @@ Response: List of order objects for the specified user or, If you can't find inf
 
 ### **Deadline:**
 
-- 60 marks: November __, 2023, 11:59 PM
-- 50 marks: November __, 2023, 11:59 PM
-- 30 marks: After __, November, 11.59PM
+- 60 marks: November 24, 2023, 11:59 PM
+- 50 marks: November 25, 2023, 11:59 PM
+- 30 marks: After 25, November, 11.59PM

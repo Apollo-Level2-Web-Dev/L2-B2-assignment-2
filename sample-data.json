@@ -1,0 +1,295 @@
+[
+    {
+        "userId": 1,
+        "username": "john_doe",
+        "fullName": {
+            "firstName": "John",
+            "lastName": "Doe"
+        },
+        "age": 30,
+        "email": "john.doe@example.com",
+        "isActive": true,
+        "hobbies": [
+            "reading",
+            "traveling"
+        ],
+        "address": {
+            "street": "123 Main St",
+            "city": "Anytown",
+            "country": "USA"
+        },
+        "orders": [
+            {
+                "productName": "Product 1",
+                "price": 23.56,
+                "quantity": 2
+            },
+            {
+                "productName": "Product 2",
+                "price": 23.56,
+                "quantity": 5
+            }
+        ]
+    },
+    {
+        "userId": 2,
+        "username": "jane_smith",
+        "fullName": {
+            "firstName": "Jane",
+            "lastName": "Smith"
+        },
+        "age": 25,
+        "email": "jane.smith@example.com",
+        "isActive": true,
+        "hobbies": [
+            "photography",
+            "gardening"
+        ],
+        "address": {
+            "street": "456 Oak Ave",
+            "city": "Smalltown",
+            "country": "USA"
+        },
+        "orders": [
+            {
+                "productName": "Product 3",
+                "price": 45.99,
+                "quantity": 3
+            }
+        ]
+    },
+    {
+        "userId": 3,
+        "username": "alice_davis",
+        "fullName": {
+            "firstName": "Alice",
+            "lastName": "Davis"
+        },
+        "age": 28,
+        "email": "alice.davis@example.com",
+        "isActive": true,
+        "hobbies": [
+            "painting",
+            "swimming"
+        ],
+        "address": {
+            "street": "789 Pine St",
+            "city": "Largetown",
+            "country": "USA"
+        },
+        "orders": []
+    },
+    {
+        "userId": 4,
+        "username": "mark_johnson",
+        "fullName": {
+            "firstName": "Mark",
+            "lastName": "Johnson"
+        },
+        "age": 35,
+        "email": "mark.johnson@example.com",
+        "isActive": true,
+        "hobbies": [
+            "cooking",
+            "hiking"
+        ],
+        "address": {
+            "street": "789 Elm St",
+            "city": "Hometown",
+            "country": "USA"
+        },
+        "orders": [
+            {
+                "productName": "Product 7",
+                "price": 12.99,
+                "quantity": 4
+            },
+            {
+                "productName": "Product 8",
+                "price": 19.99,
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "userId": 5,
+        "username": "sarah_brown",
+        "fullName": {
+            "firstName": "Sarah",
+            "lastName": "Brown"
+        },
+        "age": 42,
+        "email": "sarah.brown@example.com",
+        "isActive": true,
+        "hobbies": [
+            "painting"
+        ],
+        "address": {
+            "street": "987 Oak St",
+            "city": "Cityville",
+            "country": "USA"
+        },
+        "orders": [
+            {
+                "productName": "Product 10",
+                "price": 39.99,
+                "quantity": 3
+            }
+        ]
+    },
+    {
+        "userId": 6,
+        "username": "new_user",
+        "fullName": {
+            "firstName": "New",
+            "lastName": "User"
+        },
+        "age": 20,
+        "email": "new.user@example.com",
+        "isActive": true,
+        "hobbies": [
+            "reading",
+            "writing"
+        ],
+        "address": {
+            "street": "789 Elm St",
+            "city": "Newtown",
+            "country": "USA"
+        },
+        "orders": []
+    },
+    {
+        "userId": 7,
+        "username": "james_smith",
+        "fullName": {
+            "firstName": "James",
+            "lastName": "Smith"
+        },
+        "age": 32,
+        "email": "james.smith@example.com",
+        "isActive": true,
+        "hobbies": [
+            "photography",
+            "cooking"
+        ],
+        "address": {
+            "street": "456 Oak Ave",
+            "city": "Bigtown",
+            "country": "USA"
+        },
+        "orders": [
+            {
+                "productName": "Product 13",
+                "price": 10.99,
+                "quantity": 3
+            },
+            {
+                "productName": "Product 14",
+                "price": 25.50,
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "userId": 8,
+        "username": "emily_davis",
+        "fullName": {
+            "firstName": "Emily",
+            "lastName": "Davis"
+        },
+        "age": 28,
+        "email": "emily.davis@example.com",
+        "isActive": true,
+        "hobbies": [
+            "painting",
+            "swimming",
+            "cooking"
+        ],
+        "address": {
+            "street": "789 Pine St",
+            "city": "Largetown",
+            "country": "USA"
+        },
+        "orders": [
+            {
+                "productName": "Product 15",
+                "price": 19.99,
+                "quantity": 2
+            },
+            {
+                "productName": "Product 16",
+                "price": 12.50,
+                "quantity": 3
+            }
+        ]
+    },
+    {
+        "userId": 9,
+        "username": "michael_johnson",
+        "fullName": {
+            "firstName": "Michael",
+            "lastName": "Johnson"
+        },
+        "age": 35,
+        "email": "michael.johnson@example.com",
+        "isActive": true,
+        "hobbies": [
+            "cooking",
+            "hiking"
+        ],
+        "address": {
+            "street": "789 Elm St",
+            "city": "Hometown",
+            "country": "USA"
+        },
+        "orders": [
+            {
+                "productName": "Product 17",
+                "price": 14.99,
+                "quantity": 4
+            },
+            {
+                "productName": "Product 18",
+                "price": 9.99,
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "userId": 10,
+        "username": "linda_brown",
+        "fullName": {
+            "firstName": "Linda",
+            "lastName": "Brown"
+        },
+        "age": 42,
+        "email": "linda.brown@example.com",
+        "isActive": true,
+        "hobbies": [
+            "yoga",
+            "painting"
+        ],
+        "address": {
+            "street": "987 Oak St",
+            "city": "Cityville",
+            "country": "USA"
+        },
+        "orders": [
+            {
+                "productName": "Product 19",
+                "price": 8.99,
+                "quantity": 1
+            },
+            {
+                "productName": "Product 20",
+                "price": 19.99,
+                "quantity": 3
+            },
+            {
+                "productName": "Product 21",
+                "price": 190.99,
+                "quantity": 31
+            }
+        ]
+    }
+]

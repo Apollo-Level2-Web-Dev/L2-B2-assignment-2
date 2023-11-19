@@ -1,35 +1,53 @@
 # Mongoose Express CRUD Mastery
+**Objective**: Build a Node.js Express application with MongoDB (using Mongoose) to manage user data and their orders. Implement validation using Joi/Zod for data integrity.
 
-## **Assignment Requirements**
-
-**Objective**: Build a Node.js Express application with MongoDB (using Mongoose) to manage user data and their orders. Implement validation using Joi for data integrity.
-
-### **Set up the Project**
+## Set up the Project
 
 - Create a new Node.js Express project.
-
 - Set up a MongoDB database using Mongoose for storing user and order data.
 
-### **Define Data Models**
+## Define Data Models
 
 - Create Mongoose models for User and Order based on the provided data structure.
+- Define appropriate data types, validations.
 
-- Define appropriate data types, validations, and relationships between the User and Order models.
+### Data Types List
+
+- `userId` (number): A unique identifier for the user.
+- `username` (string): The username of the user.
+- `password` (string): The password of the user.
+- `fullName` (object): An object containing the first and last name of the user.
+    - `firstName` (string): The first name of the user.
+    - `lastName` (string): The last name of the user.
+- `age` (number): The age of the user.
+- `email` (string): The email address of the user.
+- `isActive` (boolean): A flag indicating whether the user is active or not.
+- `hobbies` (array of strings): An array containing the hobbies of the user.
+- `address` (object): An object containing the street, city, and country of the user's address.
+    - `street` (string): The street of the user's address.
+    - `city` (string): The city of the user's address.
+    - `country` (string): The country of the user's address.
+- `orders` (array of objects): An array containing the orders of the user.
+    - `productName` (string): The name of the product in the order.
+    - `price` (number): The price of the product in the order.
+    - `quantity` (number): The quantity of the product in the order.
 
 ## **Implement CRUD Operations**
 
 ## Main Section (50 Marks):
 
-### **User Management:**
+## **User Management:**
 
-#### 1. **Create a new user**
+### 1. **Create a new user**
 
 - Endpoint: **POST /api/users**
 - Request Body:
 
 ```json
 {
+  "userId": "number",
   "username": "string",
+  "password": "string",
   "fullName": {
     "firstName": "string",
     "lastName": "string"
@@ -46,36 +64,37 @@
 }
 ```
 
-- Response: Newly created user object.
+Response: Newly created user object. **Make sure that the password field is not included in the response data.**
 
 ```json
 {
 	"success": true,
 	"message": "User created successfully!"
 	"data" : {
-		  "username": "string",
-		  "fullName": {
-		    "firstName": "string",
-		    "lastName": "string"
-		  },
-		  "age": "number",
-		  "email": "string",
-		  "isActive": "boolean",
-		  "hobbies": ["string", "string"],
-		  "address": {
-		    "street": "string",
-		    "city": "string",
-		    "country": "string"
+			"userId": "number",
+		    "username": "string",
+		    "fullName": {
+		       "firstName": "string",
+		       "lastName": "string"
+		    },
+		    "age": "number",
+		    "email": "string",
+		    "isActive": "boolean",
+		    "hobbies": ["string", "string"],
+		    "address": {
+		      "street": "string",
+		      "city": "string",
+		      "country": "string"
 		  }
 		}
 }
 ```
 
-#### 2. **Retrieve a list of all users**
+### 2. **Retrieve a list of all users**
 
-- Endpoint: **GET /api/users**
+Endpoint: **GET /api/users**
 
-- Response: List of user objects.
+Response: List of user objects. Each object should only contain `username`, `fullName`, `age`, `email`, `address` . Apply suitable field filtering to exclusively retrieve the necessary information. 
 
 ```json
 {
@@ -90,8 +109,6 @@
 		  },
 		  "age": "number",
 		  "email": "string",
-		  "isActive": "boolean",
-		  "hobbies": ["string", "string"],
 		  "address": {
 		    "street": "string",
 		    "city": "string",
@@ -103,17 +120,18 @@
 }
 ```
 
-#### 3. **Retrieve a specific user by ID**
+### 3. **Retrieve a specific user by ID**
 
-- Endpoint: **GET /api/users/:userId**
+Endpoint: **GET /api/users/:userId**
 
-- Response: User object.
+Response: User object and make sure that the password field is not included in the response data. If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not. (Follow the given error response format).
 
 ```json
 {
 	"success": true,
 	"message": "User fetched successfully!"
 	"data" : {
+			"userId": "number",
 		  "username": "string",
 		  "fullName": {
 		    "firstName": "string",
@@ -132,19 +150,20 @@
 }
 ```
 
-#### 4. **Update user information**
+### 4. **Update user information**
 
-- Endpoint: **PUT /api/users/:userId**
+Endpoint: **PUT /api/users/:userId**
 
-- Request Body: Updated user data (similar structure as in user creation).
+Request Body: Updated user data (similar structure as in user creation).
 
-- Response: Updated user object.
+Response: Updated user object and make sure that the password field is not included in the response data. If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Follow the given error response format).
 
 ```json
 {
 	"success": true,
 	"message": "User updated successfully!"
 	"data" : {
+			"userId": "number",
 		  "username": "string",
 		  "fullName": {
 		    "firstName": "string",
@@ -163,81 +182,81 @@
 }
 ```
 
-#### 5. **Delete a user**
+### 5. **Delete a user**
 
-- Endpoint: **DELETE /api/users/:userId**
+Endpoint: **DELETE /api/users/:userId**
 
-- Response: Success message.
+Response: Success message or,  If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Follow the given error response format).
 
 ```json
 {
 	"success": true,
-	"message": "User deleted successfully!",
+	"message": "User deleted successfully!"
 	"data" : null
 }
 ```
 
 ## Bonus Section (10 marks):
 
-### **Order Management:**
+### **Order Management:
 
-#### 1. Add New Product in Order
+1. Add New Product in Order**
 
-- Append a new product to the order property of an existing user.
+Append a new product to the order property of an existing user.
 
-- Endpoint: **PUT /api/users/:userId/orders**
+Endpoint: **PUT /api/users/:userId/orders**
 
-- Request Body:
+Request Body: If you can't find information about the user, show a clear message. Use either `instanceof` or `static` method to display this error message.  (Follow the given error response format).
 
 ```json
 {
     "productName": "string",
-	"price": "number",
-	"quantity": "number"
+		"price": "number",
+		"quantity": "number"
 }
 ```
 
-- Response: 
+Response: 
 
 ```json
 {
 	"success": true,
-	"message": "Order created successfully!",
-	"data" : null
+	"message": "Order created successfully!"
+	"data" : null;
 }
 ```
 
-#### 2. **Retrieve all orders for a specific user**
+### 2. **Retrieve all orders for a specific user**
 
-- Endpoint: **GET /api/users/:userId/orders**
+Endpoint: **GET /api/users/:userId/orders**
 
-- Response: List of order objects for the specified user.
+Response: List of order objects for the specified user or, If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Follow the given error response format).
 
 ```json
 {
 	"success": true,
 	"message": "Order fetched successfully!"
 	"data" : {
-            "orders": [
-                {
-                    "productName": "Product 1",
-                    "price": 23.56,
-                    "quantity": 2
-                },
-                {
-                    "productName": "Product 2",
-                    "price": 230.56,
-                    "quantity": 5
-                }
-            ]
-	    }
+		  "orders": [
+            {
+                "productName": "Product 1",
+				"price": 23.56,
+				"quantity": 2
+            },
+            {
+                "productName": "Product 2",
+				"price": 23.56,
+				"quantity": 5
+            }
+        ]
+		}
 }
 ```
 
-#### 3. **Calculate Total Price of Orders for a Specific User**
+### 3. **Calculate Total Price of Orders for a Specific User**
 
 - Endpoint: **GET /api/users/:userId/orders/total-price**
-- Response: Total price of all orders for the specified user.
+- Response: Total price of all orders for the specified user or, If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not (Follow the given error response format).
 
 ```json
 {
@@ -249,10 +268,22 @@
 }
 ```
 
+### Sample Error Response
 
-## **Validation with Joi**
+```json
+{
+    "success": false,
+    "message": "User not found",
+    "error": {
+        "code": 404,
+        "description": "User not found!"
+    }
+}
+```
 
-- Use Joi to validate incoming data for user and order creation and updating operations.
+## **4. Validation with Joi/Zod**
+
+- Use Joi/zod to validate incoming data for user and order creation and updating operations.
 - Ensure that the data adheres to the structure defined in the models.
 - Handle validation errors gracefully and provide meaningful error messages in the API responses.
 

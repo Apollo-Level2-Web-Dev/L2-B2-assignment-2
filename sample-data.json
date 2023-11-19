@@ -2,6 +2,7 @@
     {
         "userId": 1,
         "username": "john_doe",
+        "password": "$2b$12$3fJyHTgM8QgU.q.tlpNVyOf.hJYfhVe7XPGCHm9Wq1RmexUZbUEeu",
         "fullName": {
             "firstName": "John",
             "lastName": "Doe"
@@ -34,6 +35,7 @@
     {
         "userId": 2,
         "username": "jane_smith",
+        "password": "$2b$12$3fJyHTgM8QgU.q.tlpNVyOf.hJYfhVe7XPGCHm9Wq1RmexUZbUEeu",
         "fullName": {
             "firstName": "Jane",
             "lastName": "Smith"
@@ -61,6 +63,7 @@
     {
         "userId": 3,
         "username": "alice_davis",
+        "password": "$2b$12$3fJyHTgM8QgU.q.tlpNVyOf.hJYfhVe7XPGCHm9Wq1RmexUZbUEeu",
         "fullName": {
             "firstName": "Alice",
             "lastName": "Davis"
@@ -82,6 +85,7 @@
     {
         "userId": 4,
         "username": "mark_johnson",
+        "password": "$2b$12$3fJyHTgM8QgU.q.tlpNVyOf.hJYfhVe7XPGCHm9Wq1RmexUZbUEeu",
         "fullName": {
             "firstName": "Mark",
             "lastName": "Johnson"
@@ -114,6 +118,7 @@
     {
         "userId": 5,
         "username": "sarah_brown",
+        "password": "$2b$12$3fJyHTgM8QgU.q.tlpNVyOf.hJYfhVe7XPGCHm9Wq1RmexUZbUEeu",
         "fullName": {
             "firstName": "Sarah",
             "lastName": "Brown"
@@ -140,6 +145,7 @@
     {
         "userId": 6,
         "username": "new_user",
+        "password": "$2b$12$3fJyHTgM8QgU.q.tlpNVyOf.hJYfhVe7XPGCHm9Wq1RmexUZbUEeu",
         "fullName": {
             "firstName": "New",
             "lastName": "User"
@@ -161,6 +167,7 @@
     {
         "userId": 7,
         "username": "james_smith",
+        "password": "$2b$12$3fJyHTgM8QgU.q.tlpNVyOf.hJYfhVe7XPGCHm9Wq1RmexUZbUEeu",
         "fullName": {
             "firstName": "James",
             "lastName": "Smith"
@@ -193,6 +200,7 @@
     {
         "userId": 8,
         "username": "emily_davis",
+        "password": "$2b$12$3fJyHTgM8QgU.q.tlpNVyOf.hJYfhVe7XPGCHm9Wq1RmexUZbUEeu",
         "fullName": {
             "firstName": "Emily",
             "lastName": "Davis"
@@ -226,6 +234,7 @@
     {
         "userId": 9,
         "username": "michael_johnson",
+        "password": "$2b$12$3fJyHTgM8QgU.q.tlpNVyOf.hJYfhVe7XPGCHm9Wq1RmexUZbUEeu",
         "fullName": {
             "firstName": "Michael",
             "lastName": "Johnson"
@@ -258,6 +267,7 @@
     {
         "userId": 10,
         "username": "linda_brown",
+        "password": "$2b$12$3fJyHTgM8QgU.q.tlpNVyOf.hJYfhVe7XPGCHm9Wq1RmexUZbUEeu",
         "fullName": {
             "firstName": "Linda",
             "lastName": "Brown"

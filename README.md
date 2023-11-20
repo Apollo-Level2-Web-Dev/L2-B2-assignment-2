@@ -128,7 +128,7 @@
 
 - Endpoint: **GET /api/users/:userId**
 
-- Response: User object and make sure that the password field is not included in the response data. If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not. (Follow the given error response format).
+- Response: User object and make sure that the password field is not included in the response data. If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not. (Use the [format for error messages](#sample-error-response) that is given below.)
 
 ```json
 {
@@ -163,7 +163,7 @@
 
 - Request Body: Updated user data (similar structure as in user creation).
 
-- Response: Updated user object and make sure that the password field is not included in the response data. If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Follow the given error response format).
+- Response: Updated user object and make sure that the password field is not included in the response data. If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Use the [format for error messages](#sample-error-response) that is given below.)
 
 ```json
 {
@@ -196,7 +196,7 @@
 
 - Endpoint: **DELETE /api/users/:userId**
 
-- Response: Success message or,  If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Follow the given error response format).
+- Response: Success message or,  If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Use the [format for error messages](#sample-error-response) that is given below.).
 
 ```json
 {
@@ -212,11 +212,11 @@
 
 1. Add New Product in Order
 
-Append a new product to the order property of an existing user.
+If the 'order' property already exists for a user, append a new product to it. Otherwise, create an 'order' array within the user object and then add the order data.
 
 - Endpoint: **PUT /api/users/:userId/orders**
 
-- Request Body: If you can't find information about the user, show a clear message. Use either `instanceof` or `static` method to display this error message.  (Follow the given error response format).
+- Request Body: If you can't find information about the user, show a clear message. Use either `instanceof` or `static` method to display this error message.  (Use the [format for error messages](#sample-error-response) that is given below.)
 
 ```json
 {
@@ -240,7 +240,8 @@ Append a new product to the order property of an existing user.
 
 - Endpoint: **GET /api/users/:userId/orders**
 
-- Response: List of order objects for the specified user or, If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Follow the given error response format).
+- Response: List of order objects for the specified user or, If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not.  (Use the [format for error messages](#sample-error-response) that is given below.)
+
 
 ```json
 {
@@ -266,7 +267,7 @@ Append a new product to the order property of an existing user.
 ### 3. **Calculate Total Price of Orders for a Specific User**
 
 - Endpoint: **GET /api/users/:userId/orders/total-price**
-- Response: Total price of all orders for the specified user or, If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not (Follow the given error response format).
+- Response: Total price of all orders for the specified user or, If you can't find information about the user, show a clear message. Use either `instance` or `static` method to determine if the user exist or not (Use the [format for error messages](#sample-error-response) that is given below.)
 
 ```json
 {
@@ -310,7 +311,7 @@ Append a new product to the order property of an existing user.
     - Strictly follow the provided API endpoint structure and naming conventions.
     - Ensure that the request and response formats match the specifications outlined in the assignment.
 4. **Validation and Error Handling:**
-    - Implement validation using Joi for both user and order data.
+    - Implement validation using Joi/zod for both user and order data.
     - Handle validation errors gracefully and provide meaningful error messages in the API responses.
     - Implement error handling for scenarios like user not found, validation errors.
 5. **Coding Tools and Libraries:**

@@ -44,48 +44,54 @@
 
 ```json
 {
-  "userId": "number",
-  "username": "string",
-  "password": "string",
-  "fullName": {
-    "firstName": "string",
-    "lastName": "string"
-  },
-  "age": "number",
-  "email": "string",
-  "isActive": "boolean",
-  "hobbies": ["string", "string"],
-  "address": {
-    "street": "string",
-    "city": "string",
-    "country": "string"
-  }
+    "userId": "number",
+    "username": "string",
+    "password": "string",
+    "fullName": {
+        "firstName": "string",
+        "lastName": "string"
+    },
+    "age": "number",
+    "email": "string",
+    "isActive": "boolean",
+    "hobbies": [
+        "string",
+        "string"
+    ],
+    "address": {
+        "street": "string",
+        "city": "string",
+        "country": "string"
+    }
 }
 ```
 
-Response: Newly created user object. **Make sure that the password field is not included in the response data.**
+- Response: Newly created user object. **Make sure that the password field is not included in the response data.**
 
 ```json
 {
-	"success": true,
-	"message": "User created successfully!"
-	"data" : {
-			"userId": "number",
-		    "username": "string",
-		    "fullName": {
-		       "firstName": "string",
-		       "lastName": "string"
-		    },
-		    "age": "number",
-		    "email": "string",
-		    "isActive": "boolean",
-		    "hobbies": ["string", "string"],
-		    "address": {
-		      "street": "string",
-		      "city": "string",
-		      "country": "string"
-		  }
-		}
+    "success": true,
+    "message": "User created successfully!",
+    "data": {
+        "userId": "number",
+        "username": "string",
+        "fullName": {
+            "firstName": "string",
+            "lastName": "string"
+        },
+        "age": "number",
+        "email": "string",
+        "isActive": "boolean",
+        "hobbies": [
+            "string",
+            "string"
+        ],
+        "address": {
+            "street": "string",
+            "city": "string",
+            "country": "string"
+        }
+    }
 }
 ```
 
@@ -96,25 +102,25 @@ Response: Newly created user object. **Make sure that the password field is not 
 
 ```json
 {
-	"success": true,
-	"message": "Users fetched successfully!"
-	"data" : [
-		{
-		  "username": "string",
-		  "fullName": {
-		    "firstName": "string",
-		    "lastName": "string"
-		  },
-		  "age": "number",
-		  "email": "string",
-		  "address": {
-		    "street": "string",
-		    "city": "string",
-		    "country": "string"
-		  }
-		},
-		// more objects...
-	]
+    "success": true,
+    "message": "Users fetched successfully!",
+    "data": [
+        {
+            "username": "string",
+            "fullName": {
+                "firstName": "string",
+                "lastName": "string"
+            },
+            "age": "number",
+            "email": "string",
+            "address": {
+                "street": "string",
+                "city": "string",
+                "country": "string"
+            }
+        },
+        // more objects...
+    ]
 }
 ```
 
@@ -126,25 +132,28 @@ Response: Newly created user object. **Make sure that the password field is not 
 
 ```json
 {
-	"success": true,
-	"message": "User fetched successfully!"
-	"data" : {
-			"userId": "number",
-		  "username": "string",
-		  "fullName": {
-		    "firstName": "string",
-		    "lastName": "string"
-		  },
-		  "age": "number",
-		  "email": "string",
-		  "isActive": "boolean",
-		  "hobbies": ["string", "string"],
-		  "address": {
-		    "street": "string",
-		    "city": "string",
-		    "country": "string"
-		  }
-		}
+    "success": true,
+    "message": "User fetched successfully!",
+    "data": {
+        "userId": "number",
+        "username": "string",
+        "fullName": {
+            "firstName": "string",
+            "lastName": "string"
+        },
+        "age": "number",
+        "email": "string",
+        "isActive": "boolean",
+        "hobbies": [
+            "string",
+            "string"
+        ],
+        "address": {
+            "street": "string",
+            "city": "string",
+            "country": "string"
+        }
+    }
 }
 ```
 
@@ -158,25 +167,28 @@ Response: Newly created user object. **Make sure that the password field is not 
 
 ```json
 {
-	"success": true,
-	"message": "User updated successfully!"
-	"data" : {
-			"userId": "number",
-		  "username": "string",
-		  "fullName": {
-		    "firstName": "string",
-		    "lastName": "string"
-		  },
-		  "age": "number",
-		  "email": "string",
-		  "isActive": "boolean",
-		  "hobbies": ["string", "string"],
-		  "address": {
-		    "street": "string",
-		    "city": "string",
-		    "country": "string"
-		  }
-		}
+    "success": true,
+    "message": "User updated successfully!",
+    "data": {
+        "userId": "number",
+        "username": "string",
+        "fullName": {
+            "firstName": "string",
+            "lastName": "string"
+        },
+        "age": "number",
+        "email": "string",
+        "isActive": "boolean",
+        "hobbies": [
+            "string",
+            "string"
+        ],
+        "address": {
+            "street": "string",
+            "city": "string",
+            "country": "string"
+        }
+    }
 }
 ```
 
@@ -189,7 +201,7 @@ Response: Newly created user object. **Make sure that the password field is not 
 ```json
 {
 	"success": true,
-	"message": "User deleted successfully!"
+	"message": "User deleted successfully!",
 	"data" : null
 }
 ```
@@ -209,18 +221,18 @@ Append a new product to the order property of an existing user.
 ```json
 {
     "productName": "string",
-		"price": "number",
-		"quantity": "number"
+    "price": "number",
+    "quantity": "number"
 }
 ```
 
-Response: 
+- Response: 
 
 ```json
 {
-	"success": true,
-	"message": "Order created successfully!"
-	"data" : null;
+    "success": true,
+    "message": "Order created successfully!",
+    "data": null;
 }
 ```
 
@@ -232,22 +244,22 @@ Response:
 
 ```json
 {
-	"success": true,
-	"message": "Order fetched successfully!"
-	"data" : {
-		  "orders": [
+    "success": true,
+    "message": "Order fetched successfully!",
+    "data": {
+        "orders": [
             {
                 "productName": "Product 1",
-				"price": 23.56,
-				"quantity": 2
+                "price": 23.56,
+                "quantity": 2
             },
             {
                 "productName": "Product 2",
-				"price": 23.56,
-				"quantity": 5
+                "price": 23.56,
+                "quantity": 5
             }
         ]
-		}
+    }
 }
 ```
 
@@ -258,11 +270,11 @@ Response:
 
 ```json
 {
-	"success": true,
-	"message": "Total price calculated successfully!",
-	"data" : {
-            "totalPrice": 454.32
-	    }
+    "success": true,
+    "message": "Total price calculated successfully!",
+    "data": {
+        "totalPrice": 454.32
+    }
 }
 ```
 

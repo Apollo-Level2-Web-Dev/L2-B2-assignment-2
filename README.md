@@ -232,7 +232,7 @@ Append a new product to the order property of an existing user.
 {
     "success": true,
     "message": "Order created successfully!",
-    "data": null;
+    "data": null
 }
 ```
 

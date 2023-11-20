@@ -14,8 +14,8 @@
 ### Data Types List
 
 - `userId` (number): A unique identifier for the user.
-- `username` (string): The username of the user.
-- `password` (string): The password of the user.
+- `username` (string): Denotes the user's unique username, ensuring uniqueness across the system.
+- `password` (string): Represents the user's password. The password is securely stored in hashed form, utilizing the bcrypt algorithm for hashing.
 - `fullName` (object): An object containing the first and last name of the user.
     - `firstName` (string): The first name of the user.
     - `lastName` (string): The last name of the user.
@@ -319,6 +319,8 @@ Append a new product to the order property of an existing user.
 6. **Coding Style:**
     - Consider using linting tools (e.g., ESLint) to enforce coding style and identify potential issues.
     - Ensure there are at least 10 commits in your GitHub repository.
+
+***Not following the specified API endpoint structure, naming conventions, and other instructions will result in a deduction of marks.***
 
 ### **Submission:**
 

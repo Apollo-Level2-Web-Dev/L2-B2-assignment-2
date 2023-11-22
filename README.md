@@ -212,7 +212,7 @@
 
 1. Add New Product in Order
 
-If the 'order' property already exists for a user, append a new product to it. Otherwise, create an 'order' array within the user object and then add the order data.
+If the 'orders' property already exists for a user, append a new product to it. Otherwise, create an 'orders' array within the user object and then add the order data.
 
 - Endpoint: **PUT /api/users/:userId/orders**
 

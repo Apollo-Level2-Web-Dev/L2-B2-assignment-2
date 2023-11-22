@@ -8,7 +8,7 @@
 
 ### Define Data Models
 
-- Create Mongoose models for User and Order based on the provided data structure.
+- Create Mongoose models for User data based on the provided data structure. (You can follow sample-data.json file for ideas)
 - Define appropriate data types, validations.
 
 ### Data Types List
